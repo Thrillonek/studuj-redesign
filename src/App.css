@@ -1,0 +1,70 @@
+body {
+	display: flex;
+	justify-content: center;
+}
+
+nav > div > * {
+	padding: 1rem;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown > .dropdown-menu {
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	min-width: 8rem;
+	visibility: hidden;
+	position: absolute;
+	background-color: var(--bg);
+	border-radius: 5px;
+	top: 80%;
+	border: 1px solid #dadada;
+	transform: translateY(-0.3rem);
+	overflow: hidden;
+	transition: transform 0.2s ease-in-out, visibility 0.2s;
+}
+
+.dropdown:hover > .dropdown-menu {
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.dropdown-menu > a {
+	padding: 0.5rem 1rem;
+}
+
+.dropdown-menu > a:hover {
+	background-color: #ececec;
+}
+
+/*
+
+ul a {
+	position: relative;
+}
+
+ul a::after {
+	content: '';
+	height: 0.1rem;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	background-color: black;
+	width: 100%;
+	transform: scaleX(10%);
+	transform-origin: left;
+	transition: transform 0.2s;
+}
+
+ul a:hover::after {
+	transform: scaleX(100%);
+}
+
+.vertical-line {
+	height: 100%;
+	width: 2px;
+	background-color: black;
+} */
