@@ -10,6 +10,7 @@ nav > div > * {
 
 nav > div > *:hover {
 	color: var(--text) !important;
+	text-decoration: none !important;
 }
 
 .dropdown {
@@ -41,6 +42,7 @@ nav > div > *:hover {
 .dropdown-menu > a {
 	padding: 0.5rem 1rem;
 	color: var(--text) !important;
+	text-decoration: none !important;
 }
 
 .dropdown-menu > a:hover {
