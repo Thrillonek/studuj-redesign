@@ -10,7 +10,7 @@ function App() {
 			<header>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
-			<nav className='flex justify-center bg-gray-200'>
+			<nav className='flex justify-center shadow-md mb-10'>
 				<div className='flex justify-between hover:text-gray-400'>
 					<a className='hover:text-gray-800' href='/'>
 						Úvod
@@ -50,7 +50,7 @@ function App() {
 					<Route path='/' element={<Home />} />
 				</Routes>
 			</main>
-			<footer className='flex justify-center bg-gray-200 my-2 py-2 w-full'>Ing. Radka Studnická 2022</footer>
+			<footer className='flex justify-center shadow-[0_3px_10px_0px_rgb(0,0,0,0.2)] my-2 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
 		</div>
 	);
 }

@@ -40,6 +40,19 @@ nav > div > * {
 	background-color: #ececec;
 }
 
+.link-list > a {
+	margin-left: 0.4rem;
+	font-weight: 400;
+	color: blue;
+}
+.link-list > a:visited {
+	color: rgb(141, 56, 252);
+}
+
+.link-list > a:hover {
+	color: rgb(0, 145, 212);
+}
+
 /*
 
 ul a {
