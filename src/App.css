@@ -5,6 +5,11 @@ body {
 
 nav > div > * {
 	padding: 1rem;
+	color: inherit !important;
+}
+
+nav > div > *:hover {
+	color: var(--text) !important;
 }
 
 .dropdown {
@@ -35,50 +40,26 @@ nav > div > * {
 
 .dropdown-menu > a {
 	padding: 0.5rem 1rem;
+	color: var(--text) !important;
 }
 
 .dropdown-menu > a:hover {
-	background-color: #ececec;
+	background-color: #e7e7e7;
 }
 
 .link-list > a {
-	margin-left: 0.4rem;
 	font-weight: 400;
-	color: blue;
-}
-.link-list > a:visited {
-	color: rgb(141, 56, 252);
+	margin-left: 0.4rem;
 }
 
-.link-list > a:hover {
-	color: rgb(0, 145, 212);
-}
-
-/*
-
-ul a {
-	position: relative;
-}
-
-ul a::after {
-	content: '';
-	height: 0.1rem;
+.sources {
+	display: flex;
+	flex-direction: column;
 	position: absolute;
-	bottom: -1px;
-	left: 0;
-	background-color: black;
-	width: 100%;
-	transform: scaleX(10%);
-	transform-origin: left;
-	transition: transform 0.2s;
+	right: 1rem;
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	border: 2px solid black;
+	font-weight: 600;
+	line-height: 1.625;
 }
-
-ul a:hover::after {
-	transform: scaleX(100%);
-}
-
-.vertical-line {
-	height: 100%;
-	width: 2px;
-	background-color: black;
-} */

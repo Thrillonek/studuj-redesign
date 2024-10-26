@@ -30,3 +30,14 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
+
+a {
+	color: blue;
+}
+a:visited {
+	color: rgb(141, 56, 252);
+}
+
+a:hover {
+	text-decoration: underline;
+}
