@@ -1,9 +1,9 @@
 export default function Home() {
 	return (
 		<>
-			<h2 className='mb-10 font-bold text-5xl text-center'>Výukové materiály a soutěže</h2>
+			<h2 className='mb-10 font-bold text-5xl text-center max-md:text-4xl'>Výukové materiály a soutěže</h2>
 
-			<div className='grid grid-cols-2 font-semibold text-lg leading-relaxed'>
+			<div className='gap-x-4 grid md:grid-cols-2 font-semibold text-lg leading-loose md:leading-relaxed'>
 				<div className='link-list'>
 					Znaky psané pomocí klávesy pravý Alt
 					<a href='odkazy/pravy_alt.pdf' target='_blank' className='text-decoration-none'>

@@ -42,8 +42,8 @@ export default function Scratch() {
 				</p>
 			</div>
 
-			<div className='flex justify-between mt-4'>
-				<div className='w-1/2'>
+			<div className='flex max-md:flex-col justify-between max-md:items-center mt-4'>
+				<div className='mb-4 md:w-1/2'>
 					<h4 className='mb-2 font-bold text-2xl'>Dinosaurus</h4>
 					<p className='ml-2 text-lg'>
 						Cílem hry je dostat dinosaura do domku. Může se pohybovat pouze po žebříku a plošině. Na začátku hry má pět životů. Pokud narazí na balón, přichází o život.
@@ -58,15 +58,19 @@ export default function Scratch() {
 					</p>
 				</div>
 
-				<iframe allowtransparency='true' width='485' height='402' src='//scratch.mit.edu/projects/embed/240159034/?autostart=false' frameborder='0' allowfullscreen></iframe>
+				<div className='w-[485px] max-[500px]:scale-[.8] max-[430px]:scale-[.7] aspect-[485/402]'>
+					<iframe allowtransparency='true' className='w-full h-full' src='//scratch.mit.edu/projects/embed/240159034/?autostart=false' frameborder='0' allowfullscreen></iframe>
+				</div>
 			</div>
-			<div className='flex justify-between mt-4'>
-				<div className='w-1/2'>
+			<div className='flex max-md:flex-col justify-between max-md:items-center mt-8'>
+				<div className='mb-4 md:w-1/2'>
 					<h4 className='mb-2 font-bold text-2xl'>Bludiště</h4>
 					<p className='ml-2 text-lg'>Pohyb šipky je zajištěn pomocí kurzorových kláves doprava, doleva, nahoru a dolů. Pokud šipka narazí na lva, jde zpátky na začátek. Až se šipka dotkne banánů, změní se scéna, zvuky</p>
 				</div>
 
-				<iframe src='https://scratch.mit.edu/projects/408374931/embed' allowtransparency='true' width='485' height='402' frameborder='0' scrolling='no' allowfullscreen></iframe>
+				<div className='w-[485px] aspect-[485/402] max-[500px]:scale-[.8] max-[430px]:scale-[.7]'>
+					<iframe src='https://scratch.mit.edu/projects/408374931/embed' allowtransparency='true' className='w-full h-full' frameborder='0' allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	);

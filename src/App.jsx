@@ -15,26 +15,33 @@ import Logo from './img/logo.jpg';
 function App() {
 	function toggleNav() {
 		const nav = document.getElementById('nav');
-		nav.classList.toggle('!max-h-[25rem]');
+		nav.classList.toggle('!max-h-[30rem]');
+		document.getElementsByClassName('nav-active')[0]?.classList.remove('nav-active');
+	}
+
+	function toggleDropdown(id) {
+		const el = document.getElementsByClassName('nav-active')[0];
+		if (el && el?.id !== id) el.classList.remove('nav-active');
+		document.getElementById(id).classList.toggle('nav-active');
 	}
 
 	useEffect(() => {
-		nav.classList.remove('!max-h-[25rem]');
+		nav.classList.remove('!max-h-[30rem]');
 		document.getElementsByClassName('nav-active')[0]?.classList.remove('nav-active');
 	}, [useLocation()]);
 
 	return (
-		<div className='relative flex flex-col items-center max-w-[1160px] min-h-screen container'>
+		<div className='relative flex flex-col items-center min-h-screen container'>
 			<header>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
 			<nav className='flex flex-col md:items-center shadow-md mb-10 w-full font-semibold'>
-				<button onClick={toggleNav} className='border-gray-300 md:hidden m-2 px-3 p-1 border rounded w-min outline-none'>
+				<button onClick={toggleNav} className='border-gray-300 md:hidden my-2 ml-4 px-3 p-1 border rounded w-min outline-none'>
 					<i className='text-2xl fa-bars fa-solid'></i>
 				</button>
 				<div id='nav' className='flex max-md:flex-col justify-between max-md:max-h-0 md:hover:text-gray-400 transition-[max-height] duration-500 max-md:overflow-hidden ease-in-out'>
 					<Link to='/'>Úvod</Link>
-					<div onClick={(e) => document.getElementById('nav-office').classList.toggle('nav-active')} className='hover:text-gray-800 cursor-default dropdown'>
+					<div onClick={(e) => toggleDropdown('nav-office')} className='hover:text-gray-800 cursor-default dropdown'>
 						<p>
 							Office <i className='ml-1 fa-caret-down fa-solid'></i>
 						</p>
@@ -45,7 +52,7 @@ function App() {
 						</div>
 					</div>
 					<Link to='/databaze'>Datábaze</Link>
-					<div onClick={(e) => document.getElementById('nav-programovani').classList.toggle('nav-active')} className='hover:text-gray-800 cursor-default dropdown'>
+					<div onClick={(e) => toggleDropdown('nav-programovani')} className='hover:text-gray-800 cursor-default dropdown'>
 						<p>
 							Programování <i className='ml-1 fa-caret-down fa-solid'></i>
 						</p>
@@ -58,7 +65,7 @@ function App() {
 					<Link to='/web'>Webové technologie</Link>
 				</div>
 			</nav>
-			<main className='w-full max-w-[90vw]' onClick={(e) => document.getElementById('nav').classList.remove('!max-h-[25rem]')}>
+			<main className='w-full max-w-[90vw]' onClick={(e) => document.getElementById('nav').classList.remove('!max-h-[30rem]')}>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/word' element={<Word />} />

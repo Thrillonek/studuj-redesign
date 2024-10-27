@@ -60,11 +60,11 @@ export default function Grafika() {
 				<a href='https://www.tinkercad.com/dashboard' className=''>
 					tinkercad.com
 				</a>
-				,
+				,{' '}
 				<a href='https://www.thingiverse.com/' className=''>
 					thingiverse.com
 				</a>
-				,
+				,{' '}
 				<a href='https://www.prusa3d.cz/' className=''>
 					prusa3d.cz
 				</a>
