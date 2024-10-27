@@ -18,6 +18,13 @@ export default function Python() {
 					<i className='mr-2 text-[--text] fa-download fa-solid' />
 					Soubory ke stažení
 				</span>
+				<br />
+				<a href='https://www.w3schools.com/python/default.asp' class='text-decoration-none'>
+					w3schools.com
+				</a>
+				<a href='https://naucse.python.cz/' class='text-decoration-none'>
+					naucse.python.cz
+				</a>
 			</div>
 
 			<ul className='font-semibold text-lg'>
@@ -44,16 +51,6 @@ export default function Python() {
 					Dokumentace -{' '}
 					<a href='https://docs.python.org/3/' class='text-decoration-none'>
 						docs.python.org
-					</a>
-				</li>
-				<li>
-					Zdroje -{' '}
-					<a href='https://www.w3schools.com/python/default.asp' class='text-decoration-none'>
-						w3schools.com
-					</a>
-					,{' '}
-					<a href='https://naucse.python.cz/' class='text-decoration-none'>
-						naucse.python.cz
 					</a>
 				</li>
 				<li>
