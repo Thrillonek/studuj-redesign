@@ -10,7 +10,7 @@ export default function Grafika() {
 		<div>
 			<h2 className='mb-10 font-bold text-5xl text-center'>Grafika</h2>
 
-			<Download files={files['excel']} state={download} setState={setDownload} />
+			<Download files={files['grafika']} state={download} setState={setDownload} />
 
 			<div className='sources'>
 				<h3 className='mb-3 font-bold text-2xl'>Zdroje</h3>
