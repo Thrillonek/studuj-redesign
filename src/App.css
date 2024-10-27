@@ -45,7 +45,8 @@ nav > div > *:hover {
 	.dropdown > .dropdown-menu {
 		visibility: hidden;
 		position: absolute;
-		top: 80%;
+		top: 90%;
+		left: 5%;
 		background-color: var(--bg);
 		border: 1px solid var(--hover);
 		transform: translateY(-0.3rem);
