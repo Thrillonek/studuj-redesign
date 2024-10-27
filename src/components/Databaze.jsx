@@ -28,7 +28,7 @@ export default function Excel() {
 				</li>
 			</ul>
 
-			<h3 className='my-4 font-bold text-3xl'>Přehled učiva </h3>
+			<h3 className='mt-6 mb-4 font-bold text-3xl'>Přehled učiva </h3>
 
 			<ol class='ml-2 font-semibold text-lg'>
 				<li>Základní objekty databáze - tabulka, dotaz, formulář, sestava</li>
