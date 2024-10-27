@@ -13,6 +13,8 @@ import Word from './components/Word';
 import Logo from './img/logo.jpg';
 
 function App() {
+	const [dark, setDark] = useState(false);
+
 	function toggleNav() {
 		const nav = document.getElementById('nav');
 		nav.classList.toggle('!max-h-[30rem]');
@@ -26,6 +28,17 @@ function App() {
 	}
 
 	useEffect(() => {
+		document.querySelector(':root').style.setProperty('--text', dark ? '#f7f3f3' : '#242424');
+		document.querySelector(':root').style.setProperty('--bg', dark ? '#333944' : '#f7f3f3');
+		document.querySelector(':root').style.setProperty('color-scheme', dark ? 'dark' : 'light');
+		document.querySelector(':root').style.setProperty('--link', dark ? '#289eff' : 'blue');
+		document.querySelector(':root').style.setProperty('--link-visited', dark ? '#a06dff' : 'rgb(141, 56, 252)');
+		document.querySelector(':root').style.setProperty('--hover', dark ? '#424952' : '#e7e7e7');
+		document.querySelector(':root').style.setProperty('--secondary', dark ? '#aaa' : '#7c7c7c');
+		document.querySelector(':root').style.setProperty('--border-opacity', dark ? '0.5' : '0.2');
+	}, [dark]);
+
+	useEffect(() => {
 		nav.classList.remove('!max-h-[30rem]');
 		document.getElementsByClassName('nav-active')[0]?.classList.remove('nav-active');
 	}, [useLocation()]);
@@ -35,11 +48,20 @@ function App() {
 			<header>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
-			<nav className='flex flex-col md:items-center shadow-md mb-10 w-full font-semibold'>
-				<button onClick={toggleNav} className='border-gray-300 md:hidden my-2 ml-4 px-3 p-1 border rounded w-min outline-none'>
-					<i className='text-2xl fa-bars fa-solid'></i>
-				</button>
-				<div id='nav' className='flex max-md:flex-col justify-between max-md:max-h-0 md:hover:text-gray-400 transition-[max-height] duration-500 max-md:overflow-hidden ease-in-out'>
+			<nav className='relative flex flex-col justify-center md:items-center mb-10 w-full font-semibold'>
+				<div className='relative z-0 md:absolute flex justify-between md:justify-end w-full'>
+					<button onClick={toggleNav} className='border-gray-300 md:hidden my-2 ml-4 px-3 p-1 border rounded w-min outline-none'>
+						<i className='text-2xl fa-bars fa-solid'></i>
+					</button>
+					<div onClick={(e) => setDark(!dark)} className='flex items-center mr-4 cursor-pointer'>
+						<div className='flex items-center border-[--text] border rounded-full h-5 aspect-[4/2]'>
+							<div className={'border-[--text] mx-[.1rem] border rounded-full h-[90%] aspect-square transition-transform ' + (dark && 'translate-x-[120%]')} />
+						</div>
+						<i className={'pl-2 pr-0 fa-solid ' + (dark ? 'fa-moon' : 'fa-sun')}></i>
+					</div>
+				</div>
+
+				<div id='nav' className='z-10 flex max-md:flex-col justify-between max-md:max-h-0 md:hover:text-gray-400 transition-[max-height] duration-500 max-md:overflow-hidden ease-in-out'>
 					<Link to='/'>Úvod</Link>
 					<div onClick={(e) => toggleDropdown('nav-office')} className='hover:text-gray-800 cursor-default dropdown'>
 						<p>
@@ -78,7 +100,7 @@ function App() {
 					<Route path='/web' element={<Web />} />
 				</Routes>
 			</main>
-			<footer className='flex justify-center shadow-[0_3px_10px_0px_rgb(0,0,0,0.2)] my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
+			<footer className='flex justify-center my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
 		</div>
 	);
 }

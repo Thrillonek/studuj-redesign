@@ -20,6 +20,11 @@
 	color-scheme: light;
 	--bg: #f7f3f3;
 	--text: #242424;
+	--hover: #e7e7e7;
+	--secondary: #7c7c7c;
+	--link: blue;
+	--link-visited: rgb(141, 56, 252);
+	--border-opacity: 0.2;
 
 	color: var(--text);
 	background-color: var(--bg);
@@ -68,10 +73,10 @@
 }
 
 a {
-	color: blue;
+	color: var(--link);
 }
 a:visited {
-	color: rgb(141, 56, 252);
+	color: var(--link-visited);
 }
 
 a:hover {

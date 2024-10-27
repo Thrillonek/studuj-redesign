@@ -14,7 +14,7 @@ export default function Home() {
 
 			<div className='sources'>
 				<h3 className='mb-3 font-bold text-2xl'>Zdroje</h3>
-				<span onClick={(e) => setDownload(true)} className='text-[#00F] hover:underline cursor-pointer download-link'>
+				<span onClick={(e) => setDownload(true)} className='text-[--link] hover:underline cursor-pointer download-link'>
 					<i className='mr-2 text-[--text] fa-download fa-solid' />
 					Soubory ke stažení
 				</span>
