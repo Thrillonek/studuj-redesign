@@ -3,6 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Databaze from './components/Databaze';
 import Excel from './components/Excel';
+import Grafika from './components/Grafika';
 import Home from './components/Home';
 import PowerPoint from './components/PowerPoint';
 import Python from './components/Python';
@@ -52,8 +53,8 @@ function App() {
 					<Route path='/databaze' element={<Databaze />} />
 					<Route path='/python' element={<Python />} />
 					<Route path='/scratch' element={<Scratch />} />
-					{/* <Route path='/grafika' element={<Grafika />} />
-					<Route path='/web' element={<Web />} /> */}
+					<Route path='/grafika' element={<Grafika />} />
+					{/*<Route path='/web' element={<Web />} /> */}
 				</Routes>
 			</main>
 			<footer className='flex justify-center shadow-[0_3px_10px_0px_rgb(0,0,0,0.2)] my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
