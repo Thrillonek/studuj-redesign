@@ -54,8 +54,8 @@ function App() {
 						<i className='text-2xl fa-bars fa-solid'></i>
 					</button>
 					<div onClick={(e) => setDark(!dark)} className='flex items-center mr-4 cursor-pointer'>
-						<div className='flex items-center border-[--text] border rounded-full h-5 aspect-[4/2]'>
-							<div className={'border-[--text] mx-[.1rem] border rounded-full h-[90%] aspect-square transition-transform ' + (dark && 'translate-x-[120%]')} />
+						<div className='relative flex items-center border-[--text] border rounded-full h-5 aspect-[4/2]'>
+							<div className={'border-[--text] absolute left-[.12rem] border rounded-full h-[90%] aspect-square transition-transform ' + (dark && 'translate-x-[1.135rem]')} />
 						</div>
 						<i className={'pl-2 pr-0 fa-solid ' + (dark ? 'fa-moon' : 'fa-sun')}></i>
 					</div>
