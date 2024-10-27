@@ -31,7 +31,7 @@ export default function Grafika() {
 				</a>
 			</div>
 
-			<h5 className='mt-6 mb-2 font-bold text-3xl'>Gimp </h5>
+			<h5 className='mt-6 mb-2 font-bold text-3xl'>Gimp</h5>
 			<p className='ml-2 font-semibold text-lg'>
 				<a href='https://www.gimp.org/' className=''>
 					Gimp.org

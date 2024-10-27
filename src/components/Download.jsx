@@ -10,7 +10,9 @@ export default function Download({ files, state, setState }) {
 	function handleClick(e) {
 		let clientX = e.clientX || e.touches[0].clientX;
 		let clientY = e.clientY || e.touches[0].clientY;
-		const rect = document.getElementsByClassName('download')[0].getBoundingClientRect();
+		const el = document.getElementsByClassName('download')[0];
+		if (!el) return;
+		const rect = el.getBoundingClientRect();
 		if (!e.target.classList.contains('download-link') && !(clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom)) {
 			setState(false);
 		}
