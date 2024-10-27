@@ -48,7 +48,7 @@ function App() {
 			<header>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
-			<nav className='relative flex flex-col justify-center md:items-center mb-10 w-full font-semibold'>
+			<nav className='relative flex flex-col justify-center md:items-start mb-10 w-full font-semibold'>
 				<div className='relative z-0 md:absolute flex justify-between md:justify-end w-full'>
 					<button onClick={toggleNav} className='border-gray-300 md:hidden my-2 ml-4 px-3 p-1 border rounded w-min outline-none'>
 						<i className='text-2xl fa-bars fa-solid'></i>
@@ -61,7 +61,7 @@ function App() {
 					</div>
 				</div>
 
-				<div id='nav' className='z-10 flex max-md:flex-col justify-between max-md:max-h-0 md:hover:text-gray-400 transition-[max-height] duration-500 max-md:overflow-hidden ease-in-out'>
+				<div id='nav' className='z-10 flex max-md:flex-col justify-between ml-4 max-md:max-h-0 md:hover:text-gray-400 transition-[max-height] duration-500 max-md:overflow-hidden ease-in-out'>
 					<Link to='/'>Úvod</Link>
 					<div onClick={(e) => toggleDropdown('nav-office')} className='hover:text-gray-800 cursor-default dropdown'>
 						<p>
