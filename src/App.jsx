@@ -1,6 +1,7 @@
 import {} from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Excel from './components/Excel';
 import Home from './components/Home';
 import Word from './components/Word';
 import Logo from './img/logo.jpg';
@@ -20,7 +21,7 @@ function App() {
 						</span>
 						<div className='dropdown-menu'>
 							<a href='/word'>Word</a>
-							<a href=''>Excel</a>
+							<a href='/excel'>Excel</a>
 							<a href=''>PowerPoint</a>
 						</div>
 					</div>
@@ -42,6 +43,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/word' element={<Word />} />
+					<Route path='/excel' element={<Excel />} />
 				</Routes>
 			</main>
 			<footer className='flex justify-center shadow-[0_3px_10px_0px_rgb(0,0,0,0.2)] my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
