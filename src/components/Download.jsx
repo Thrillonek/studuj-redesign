@@ -19,7 +19,7 @@ export default function Download({ files, state, setState }) {
 	}
 
 	return (
-		<div className={'top-1/2 left-1/2 z-10 shadow-xl w-[min(30rem,90%)] duration-300 font-semibold fixed border-2 border-gray-300 bg-[--bg] p-6 rounded-lg -translate-x-1/2 transition-[top] download -translate-y-1/2 ' + (!state && 'top-[150%]')}>
+		<div className={'top-1/2 left-1/2 z-10 shadow-xl w-[min(30rem,90%)] visible duration-300 font-semibold fixed border-2 border-gray-300 bg-[--bg] p-6 rounded-lg -translate-x-1/2 transition-[top,visibility] download -translate-y-1/2 ' + (!state && 'top-[150%] invisible')}>
 			<i onClick={(e) => setState(false)} className='top-2 right-4 absolute text-xl cursor-pointer fa-solid fa-xmark'></i>
 			<h2 className='mb-4 font-bold text-2xl'>Soubory</h2>
 			<form className='flex flex-col mb-2 w-[calc(100%-1rem)]'>
