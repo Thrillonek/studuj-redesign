@@ -31,6 +31,23 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
+	background-clip: content-box;
+}
+
 a {
 	color: blue;
 }
