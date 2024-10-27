@@ -1,45 +1,46 @@
 import {} from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Databaze from './components/Databaze';
 import Excel from './components/Excel';
 import Home from './components/Home';
 import PowerPoint from './components/PowerPoint';
 import Python from './components/Python';
+import Scratch from './components/Scratch';
 import Word from './components/Word';
 import Logo from './img/logo.jpg';
 
 function App() {
 	return (
-		<div className='relative min-h-screen'>
+		<div className='relative max-w-[1160px] min-h-screen container'>
 			<header>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
 			<nav className='flex justify-center shadow-md mb-10 font-semibold'>
 				<div className='flex justify-between hover:text-gray-400'>
-					<a href='/'>Úvod</a>
+					<Link to='/'>Úvod</Link>
 					<div className='hover:text-gray-800 cursor-default dropdown'>
 						<span>
 							Office <i className='ml-1 fa-caret-down fa-solid'></i>
 						</span>
 						<div className='dropdown-menu'>
-							<a href='/word'>Word</a>
-							<a href='/excel'>Excel</a>
-							<a href='/powerpoint'>PowerPoint</a>
+							<Link to='/word'>Word</Link>
+							<Link to='/excel'>Excel</Link>
+							<Link to='/powerpoint'>PowerPoint</Link>
 						</div>
 					</div>
-					<a href='/databaze'>Datábaze</a>
+					<Link to='/databaze'>Datábaze</Link>
 					<div className='hover:text-gray-800 cursor-default dropdown'>
 						<span>
 							Programování <i className='ml-1 fa-caret-down fa-solid'></i>
 						</span>
 						<div className='dropdown-menu'>
-							<a href='/python'>Python</a>
-							<a href='/scratch'>Scratch</a>
+							<Link to='/python'>Python</Link>
+							<Link to='/scratch'>Scratch</Link>
 						</div>
 					</div>
-					<a href='/grafika'>Grafika</a>
-					<a href='/web'>Webové technologie</a>
+					<Link to='/grafika'>Grafika</Link>
+					<Link to='/web'>Webové technologie</Link>
 				</div>
 			</nav>
 			<main>
@@ -50,8 +51,8 @@ function App() {
 					<Route path='/powerpoint' element={<PowerPoint />} />
 					<Route path='/databaze' element={<Databaze />} />
 					<Route path='/python' element={<Python />} />
-					{/* <Route path='/scratch' element={<Scratch />} />
-					<Route path='/grafika' element={<Grafika />} />
+					<Route path='/scratch' element={<Scratch />} />
+					{/* <Route path='/grafika' element={<Grafika />} />
 					<Route path='/web' element={<Web />} /> */}
 				</Routes>
 			</main>
