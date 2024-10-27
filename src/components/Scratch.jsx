@@ -42,7 +42,7 @@ export default function Scratch() {
 				</p>
 			</div>
 
-			<div className='flex max-md:flex-col justify-between max-md:items-center mt-4'>
+			<div className='flex max-md:flex-col justify-between max-md:items-center mt-12'>
 				<div className='mb-4 md:w-1/2'>
 					<h4 className='mb-2 font-bold text-2xl'>Dinosaurus</h4>
 					<p className='ml-2 text-lg'>
