@@ -45,7 +45,7 @@ function App() {
 
 	return (
 		<div className='relative flex flex-col items-center min-h-screen container'>
-			<header>
+			<header className='w-full'>
 				<img src={Logo} alt='Logo' className='bg-black w-full' />
 			</header>
 			<nav className='relative flex flex-col justify-center md:items-start mb-10 w-full font-semibold'>
