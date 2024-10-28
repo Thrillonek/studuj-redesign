@@ -1,7 +1,7 @@
 {
 	"rewrites": [
 		{
-			"source": "/((?!odkazy/.*).*)",
+			"source": "/(.*)",
 			"destination": "/"
 		}
 	]
