@@ -100,7 +100,7 @@ function App() {
 					<Route path='/web' element={<Web />} />
 				</Routes>
 			</main>
-			<footer className='flex justify-center my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2024</footer>
+			<footer className='flex justify-center my-2 mt-8 py-2 rounded w-full font-semibold'>&copy; Ing. Radka Studnická 2022</footer>
 		</div>
 	);
 }

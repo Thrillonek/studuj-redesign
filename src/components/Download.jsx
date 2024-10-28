@@ -28,7 +28,7 @@ export default function Download({ files, state, setState }) {
 				</label>
 				<input onChange={(e) => setFilter(e.target.value)} className='bg-[--hover] ml-1 px-2 py-1 rounded-lg outline-none' id='findFile' type='text' />
 			</form>
-			<div className='flex flex-col h-[75vh] md:h-[70vh] overflow-auto'>
+			<div className='flex flex-col h-[60vh] overflow-auto'>
 				{files.map((file) => {
 					if (filter && !file.includes(filter)) return;
 					return (
