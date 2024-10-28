@@ -1,6 +1,8 @@
 {
-	"rewrites": {
-		"source": "/((?!odkazy/.*).*)",
-		"destination": "/"
-	}
+	"rewrites": [
+		{
+			"source": "/((?!odkazy/.*).*)",
+			"destination": "/"
+		}
+	]
 }
