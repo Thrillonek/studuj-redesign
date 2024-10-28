@@ -10,7 +10,7 @@ export default function Scratch() {
 		<div>
 			<h2 className='mb-10 font-bold text-5xl text-center'>Scratch</h2>
 
-			<Download files={files['scratch']} state={download} setState={setDownload} />
+			<Download name={'scratch'} state={download} setState={setDownload} />
 
 			<div className='sources'>
 				<h3 className='mb-3 font-bold text-2xl'>Zdroje</h3>

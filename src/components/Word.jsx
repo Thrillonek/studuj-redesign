@@ -4,13 +4,11 @@ import Download from './Download';
 export default function Home() {
 	const [download, setDownload] = useState(false);
 
-	let files = __FILES__;
-
 	return (
 		<div>
 			<h2 className='mb-10 font-bold text-5xl text-center'>Word</h2>
 
-			<Download files={files['word']} state={download} setState={setDownload} />
+			<Download name={'word'} state={download} setState={setDownload} />
 
 			<div className='sources'>
 				<h3 className='mb-3 font-bold text-2xl'>Zdroje</h3>

@@ -3,9 +3,9 @@ import fs from 'fs';
 import { defineConfig } from 'vite';
 
 const files = {};
-fs.readdirSync('./odkazy').forEach((file) => {
+fs.readdirSync('./public/assets').forEach((file) => {
 	if (!file.includes('.')) {
-		const dir = fs.readdirSync(`./odkazy/${file}`);
+		const dir = fs.readdirSync(`./public/assets/${file}`);
 		files[file] = dir;
 	}
 });

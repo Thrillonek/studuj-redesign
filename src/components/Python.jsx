@@ -10,7 +10,7 @@ export default function Python() {
 		<div>
 			<h2 className='mb-10 font-bold text-5xl text-center'>Python</h2>
 
-			<Download files={files['python']} state={download} setState={setDownload} />
+			<Download name={'python'} state={download} setState={setDownload} />
 
 			<div className='sources'>
 				<h3 className='mb-3 font-bold text-2xl'>Zdroje</h3>

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 
-export default function Download({ files, state, setState }) {
+export default function Download({ name, state, setState }) {
 	const [filter, setFilter] = useState();
+
+	const files = __FILES__[name];
 
 	useEffect(() => {
 		document.onclick = handleClick;
@@ -32,7 +34,7 @@ export default function Download({ files, state, setState }) {
 				{files.map((file) => {
 					if (filter && !file.includes(filter)) return;
 					return (
-						<a key={file} className='mr-8 mb-1 w-min text-lg' href={'/odkazy/word/' + file}>
+						<a key={file} className='mr-8 mb-1 w-min text-lg' href={`/assets/${name}/${file}`}>
 							{file}
 						</a>
 					);
